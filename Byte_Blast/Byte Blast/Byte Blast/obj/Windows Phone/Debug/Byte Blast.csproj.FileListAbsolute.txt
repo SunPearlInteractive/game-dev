@@ -1,0 +1,18 @@
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\background.xnb
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Byte Blast.dll
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Byte Blast.pdb
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\Byte Blast.dll
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\Byte Blast.pdb
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\AppManifest.xaml
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\WMAppManifest.xml.g
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Byte Blast.xap
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\XapCacheFile.xml
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Byte Blast.xap
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\XapCacheFile.xml
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\AppManifest.xaml
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\WMAppManifest.xml.g
+c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\
