@@ -19,6 +19,7 @@ namespace Byte_Blast
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private CameraManager m_CameraController;
 
         #region Content Declerations
 
@@ -41,6 +42,10 @@ namespace Byte_Blast
 
             // Extend battery life under lock.
             InactiveSleepTime = TimeSpan.FromSeconds(1);
+
+            m_CameraController = new CameraManager(GraphicsDevice.Viewport);
+            m_CameraController.EnableTargetFollow((int)CameraManager.FollowState.SMOOTH);
+            m_CameraController.SetTarget(new Vector2(-600, -200), 1.0f, 0.0f, 10.0f);
         }
 
         /// <summary>
@@ -65,6 +70,7 @@ namespace Byte_Blast
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            // Load Game Content
             try
             {
                 m_BackgoundSprite = Content.Load<Texture2D>("background");
@@ -81,7 +87,7 @@ namespace Byte_Blast
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            Content.Unload();
         }
 
         /// <summary>
@@ -96,6 +102,16 @@ namespace Byte_Blast
                 this.Exit();
 
             // TODO: Add your update logic here
+            m_CameraController.Update();
+
+            TouchCollection tc = TouchPanel.GetState();
+            foreach (TouchLocation tl in tc)
+            {
+                if (tl.State == TouchLocationState.Released)
+                {
+                    m_CameraController.SetCamera(new Vector2(800, 400), 0.1f, 0.5f);
+                }
+            }
 
             base.Update(gameTime);
         }
@@ -109,16 +125,16 @@ namespace Byte_Blast
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // Draw Game
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, null, null, null, null, m_CameraController.GetCamera().Transform);
 
             spriteBatch.Draw(m_BackgoundSprite, new Vector2(-400, -240), Color.White);
 
             spriteBatch.End();
 
             // Draw GUI
-            //spriteBatch.Begin();
+            spriteBatch.Begin();
 
-            //spriteBatch.End();
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

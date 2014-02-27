@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\background.xnb</Output>
+      <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\background.xnb</Output>
       <Time>2014-02-26T22:52:48.1607139+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -17,10 +17,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte BlastContent\</RootDirectory>
-      <LoggerRootDirectory>c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\</LoggerRootDirectory>
-      <IntermediateDirectory>c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte BlastContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

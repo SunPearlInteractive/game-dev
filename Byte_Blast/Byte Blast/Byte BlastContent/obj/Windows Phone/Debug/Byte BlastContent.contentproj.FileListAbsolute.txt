@@ -1,1 +1,2 @@
 c:\users\ryan\documents\visual studio 2010\Projects\Byte Blast\Byte Blast\Byte BlastContent\obj\Windows Phone\Debug\Byte BlastContent.contentprojResolveAssemblyReference.cache
+C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte BlastContent\obj\Windows Phone\Debug\Byte BlastContent.contentprojResolveAssemblyReference.cache
