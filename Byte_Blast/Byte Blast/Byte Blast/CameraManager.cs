@@ -73,7 +73,9 @@ namespace Byte_Blast
             {
                 Vector2 TravelVector = Vector2.Normalize((m_CameraTarget.Pos - m_Camera.Pos));
                 m_Camera.Pos += TravelVector * m_FollowSpeed;
-            }
+                m_Camera.Rotation = MathHelper.Lerp(m_Camera.Rotation, m_CameraTarget.Rotation, 10.0f / distance);
+                m_Camera.Zoom = MathHelper.Lerp(m_Camera.Zoom, m_CameraTarget.Zoom, 10.0f / distance);
+            }            
         }
 
         /// <summary>

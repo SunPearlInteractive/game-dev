@@ -44,7 +44,7 @@ namespace Byte_Blast
             InactiveSleepTime = TimeSpan.FromSeconds(1);
 
             m_CameraController = new CameraManager(GraphicsDevice.Viewport);
-            m_CameraController.EnableTargetFollow((int)CameraManager.FollowState.SMOOTH);
+            m_CameraController.EnableTargetFollow((int)CameraManager.FollowState.LINEAR);
             m_CameraController.SetTarget(new Vector2(-600, -200), 1.0f, 0.0f, 10.0f);
         }
 
@@ -109,7 +109,7 @@ namespace Byte_Blast
             {
                 if (tl.State == TouchLocationState.Released)
                 {
-                    m_CameraController.SetCamera(new Vector2(800, 400), 0.1f, 0.5f);
+                    m_CameraController.SetCamera(new Vector2(800, 400), 0.1f, 1.0f);
                 }
             }
 
