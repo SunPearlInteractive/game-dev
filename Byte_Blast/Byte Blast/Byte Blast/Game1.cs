@@ -25,7 +25,6 @@ namespace Byte_Blast
         #region Content Declerations
 
         Texture2D m_BackgoundSprite;
-        Texture2D[] m_Hallways = new Texture2D[1];
 
         #endregion
 
@@ -79,7 +78,6 @@ namespace Byte_Blast
             try
             {
                 m_BackgoundSprite = Content.Load<Texture2D>("background");
-                m_Hallways[0] = Content.Load<Texture2D>("hallway_01");
             }
             catch (Exception E)
             {
