@@ -8,7 +8,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\background.xnb</Output>
-      <Time>2014-02-26T22:52:48.1607139+00:00</Time>
+      <Time>2014-02-28T17:33:08.2343019+00:00</Time>
+    </Item>
+    <Item>
+      <Source>hallway_0.png</Source>
+      <Name>hallway_0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\hallway_0.xnb</Output>
+      <Time>2014-02-28T23:40:33.0855554+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

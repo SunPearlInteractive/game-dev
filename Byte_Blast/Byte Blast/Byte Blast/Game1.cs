@@ -19,11 +19,13 @@ namespace Byte_Blast
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        private CameraManager m_CameraController;
+        private CameraManager m_CameraManager;
+        private HallwayManager m_HallwayManager;
 
         #region Content Declerations
 
         Texture2D m_BackgoundSprite;
+        Texture2D[] m_Hallways = new Texture2D[1];
 
         #endregion
 
@@ -43,9 +45,12 @@ namespace Byte_Blast
             // Extend battery life under lock.
             InactiveSleepTime = TimeSpan.FromSeconds(1);
 
-            m_CameraController = new CameraManager(GraphicsDevice.Viewport);
-            m_CameraController.EnableTargetFollow((int)CameraManager.FollowState.LINEAR);
-            m_CameraController.SetTarget(new Vector2(-600, -200), 1.0f, 0.0f, 10.0f);
+            m_CameraManager = new CameraManager(GraphicsDevice.Viewport);
+            m_CameraManager.EnableTargetFollow((int)CameraManager.FollowState.SMOOTH);
+            m_CameraManager.SetTarget(Vector2.Zero, 1.0f, 0.0f, 10.0f);
+            m_CameraManager.SetCamera(new Vector2(0.0f, -200.0f), 0.075f, 0.0f);
+
+            m_HallwayManager = new HallwayManager();
         }
 
         /// <summary>
@@ -74,11 +79,14 @@ namespace Byte_Blast
             try
             {
                 m_BackgoundSprite = Content.Load<Texture2D>("background");
+                m_Hallways[0] = Content.Load<Texture2D>("hallway_01");
             }
             catch (Exception E)
             {
                 Console.WriteLine("Fatal Error: " + E.Message);
             }
+
+            m_HallwayManager.Load(Content);
         }
 
         /// <summary>
@@ -102,16 +110,8 @@ namespace Byte_Blast
                 this.Exit();
 
             // TODO: Add your update logic here
-            m_CameraController.Update();
-
-            TouchCollection tc = TouchPanel.GetState();
-            foreach (TouchLocation tl in tc)
-            {
-                if (tl.State == TouchLocationState.Released)
-                {
-                    m_CameraController.SetCamera(new Vector2(800, 400), 0.1f, 1.0f);
-                }
-            }
+            m_HallwayManager.Update(gameTime);
+            m_CameraManager.Update();
 
             base.Update(gameTime);
         }
@@ -125,9 +125,10 @@ namespace Byte_Blast
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // Draw Game
-            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, null, null, null, null, m_CameraController.GetCamera().Transform);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, m_CameraManager.GetCamera().Transform);
 
-            spriteBatch.Draw(m_BackgoundSprite, new Vector2(-400, -240), Color.White);
+            m_HallwayManager.Draw(spriteBatch);
+            spriteBatch.Draw(m_BackgoundSprite, new Vector2(-1024, -240), Color.White);
 
             spriteBatch.End();
 
