@@ -21,6 +21,7 @@ namespace Byte_Blast
         SpriteBatch spriteBatch;
         private CameraManager m_CameraManager;
         private HallwayManager m_HallwayManager;
+        private SwipeManager m_SwipeManager;
 
         #region Content Declerations
 
@@ -50,6 +51,8 @@ namespace Byte_Blast
             m_CameraManager.SetCamera(new Vector2(0.0f, -200.0f), 0.075f, 0.0f);
 
             m_HallwayManager = new HallwayManager();
+
+            m_SwipeManager = new SwipeManager();
         }
 
         /// <summary>
@@ -60,7 +63,7 @@ namespace Byte_Blast
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            TouchPanel.EnabledGestures = GestureType.Flick;
 
             base.Initialize();
         }
@@ -85,6 +88,7 @@ namespace Byte_Blast
             }
 
             m_HallwayManager.Load(Content);
+            m_SwipeManager.Load(Content);
         }
 
         /// <summary>
@@ -110,6 +114,7 @@ namespace Byte_Blast
             // TODO: Add your update logic here
             m_HallwayManager.Update(gameTime);
             m_CameraManager.Update();
+            m_SwipeManager.Update();
 
             base.Update(gameTime);
         }
@@ -132,6 +137,8 @@ namespace Byte_Blast
 
             // Draw GUI
             spriteBatch.Begin();
+
+            m_SwipeManager.Draw(spriteBatch);
 
             spriteBatch.End();
 
