@@ -77,46 +77,38 @@ namespace Byte_Blast
 
         private void HandleSwipe(Vector2 velocity)
         {
-            if (velocity.X < 0.5f)
+            bool success = false;
+
+            if (velocity.X < -300.0f)
             {
                 if (m_Swipes[m_CurrentSwipe] == (int)SwipeDirection.LEFT)
-                    m_CurrentSwipe++;
-                else
-                {
-                    m_Finsihed = true;
-                    m_Successful = false;
-                }
+                    success = true;
             }
-            else if (velocity.X > 0.5f)
+            if (velocity.X > 300.0f)
             {
                 if (m_Swipes[m_CurrentSwipe] == (int)SwipeDirection.RIGHT)
-                    m_CurrentSwipe++;
-                else
-                {
-                    m_Finsihed = true;
-                    m_Successful = false;
-                }
+                    success = true;
             }
-            else if (velocity.Y < 0.5f)
+            if (velocity.Y < -300.0f)
             {
                 if (m_Swipes[m_CurrentSwipe] == (int)SwipeDirection.UP)
-                    m_CurrentSwipe++;
-                else
-                {
-                    m_Finsihed = true;
-                    m_Successful = false;
-                }
+                    success = true;
             }
-            else if (velocity.Y > 0.5f)
+            if (velocity.Y > 300.0f)
             {
                 if (m_Swipes[m_CurrentSwipe] == (int)SwipeDirection.DOWN)
-                    m_CurrentSwipe++;
-                else
-                {
-                    m_Finsihed = true;
-                    m_Successful = false;
-                }
+                    success = true;
             }
+
+            if (success)
+                m_CurrentSwipe++;
+            else
+            {
+                m_Finsihed = true;
+                m_Successful = false;
+            }
+
+            Console.WriteLine(velocity);
         }
 
         public bool GetWin()

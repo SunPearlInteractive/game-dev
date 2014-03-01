@@ -34,24 +34,19 @@ namespace Byte_Blast
 
         public void Update()
         {
-            foreach (SwipeSequence ss in m_SwipeSequences)
-            {
-                ss.Update();
+            m_SwipeSequences[0].Update();
 
-                if (ss.GetWin())
-                {
-                    m_ToAttack = true;
-                    m_SwipeSequences.Remove(ss);
-                    m_SwipeSequences.Add(new SwipeSequence());
-                    break;
-                }
-                else if (ss.GetLose())
-                {
-                    m_ToAttack = false;
-                    m_SwipeSequences.Remove(ss);
-                    m_SwipeSequences.Add(new SwipeSequence());
-                    break;
-                }
+            if (m_SwipeSequences[0].GetWin())
+            {
+                m_ToAttack = true;
+                m_SwipeSequences.RemoveAt(0);
+                m_SwipeSequences.Add(new SwipeSequence());
+            }
+            else if (m_SwipeSequences[0].GetLose())
+            {
+                m_ToAttack = false;
+                m_SwipeSequences.RemoveAt(0);
+                m_SwipeSequences.Add(new SwipeSequence());
             }
         }
 
