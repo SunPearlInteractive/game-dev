@@ -25,9 +25,9 @@ namespace Byte_Blast
             m_TextureID = new Random().Next(0, HallwayManager.NumberOfTextures - 1);
         }
 
-        public void Update()
+        public void Update(float speed)
         {
-            m_XPos -= 10.0f;
+            m_XPos -= speed;
         }
 
         public void SetXPosition(float xpos)

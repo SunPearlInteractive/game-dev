@@ -1,3 +1,4 @@
 Content\background.xnb
 Content\hallway_0.xnb
 Content\arrows.xnb
+Content\monster_0.xnb

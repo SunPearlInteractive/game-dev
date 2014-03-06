@@ -24,3 +24,10 @@ C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\o
 C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\Byte Blast.csprojResolveAssemblyReference.cache
 C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\hallway_0.xnb
 C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\arrows.xnb
+C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\monster_0.xnb
+C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Byte Blast.xap
+C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\AppManifest.xaml
+C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\

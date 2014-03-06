@@ -22,6 +22,8 @@ namespace Byte_Blast
         private CameraManager m_CameraManager;
         private HallwayManager m_HallwayManager;
         private SwipeManager m_SwipeManager;
+        private MonsterManager m_MonsterManager;
+        private float m_GameSpeed = 6.0f;
 
         #region Content Declerations
 
@@ -45,14 +47,14 @@ namespace Byte_Blast
             // Extend battery life under lock.
             InactiveSleepTime = TimeSpan.FromSeconds(1);
 
+            m_HallwayManager = new HallwayManager();
+            m_SwipeManager = new SwipeManager();
+            m_MonsterManager = new MonsterManager();
             m_CameraManager = new CameraManager(GraphicsDevice.Viewport);
+
             m_CameraManager.EnableTargetFollow((int)CameraManager.FollowState.SMOOTH);
             m_CameraManager.SetTarget(Vector2.Zero, 1.0f, 0.0f, 10.0f);
-            m_CameraManager.SetCamera(new Vector2(0.0f, -200.0f), 0.075f, 0.0f);
-
-            m_HallwayManager = new HallwayManager();
-
-            m_SwipeManager = new SwipeManager();
+            m_CameraManager.SetCamera(new Vector2(0.0f, -200.0f), 0.075f, 0.0f);            
         }
 
         /// <summary>
@@ -89,6 +91,7 @@ namespace Byte_Blast
 
             m_HallwayManager.Load(Content);
             m_SwipeManager.Load(Content);
+            m_MonsterManager.Load(Content);
         }
 
         /// <summary>
@@ -111,10 +114,22 @@ namespace Byte_Blast
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            float playspeed = m_GameSpeed;
+            if (m_MonsterManager.IsConfronting())
+                playspeed = 0.0f;
+
+            Console.WriteLine(m_MonsterManager.IsConfronting());
+
             // TODO: Add your update logic here
-            m_HallwayManager.Update(gameTime);
+            m_HallwayManager.Update(playspeed);
             m_CameraManager.Update();
             m_SwipeManager.Update();
+            m_MonsterManager.Update(playspeed);
+
+            if (m_SwipeManager.AttackReady())
+            {
+                m_MonsterManager.DamageMonster(5);
+            }
 
             base.Update(gameTime);
         }
@@ -131,6 +146,7 @@ namespace Byte_Blast
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, m_CameraManager.GetCamera().Transform);
 
             m_HallwayManager.Draw(spriteBatch);
+            m_MonsterManager.Draw(spriteBatch);
             spriteBatch.Draw(m_BackgoundSprite, new Vector2(-1024, -240), Color.White);
 
             spriteBatch.End();

@@ -69,6 +69,8 @@
     <Compile Include="CameraManager.cs" />
     <Compile Include="Hallway.cs" />
     <Compile Include="HallwayManager.cs" />
+    <Compile Include="Monster.cs" />
+    <Compile Include="MonsterManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SwipeManager.cs" />
     <Compile Include="SwipeSequence.cs" />

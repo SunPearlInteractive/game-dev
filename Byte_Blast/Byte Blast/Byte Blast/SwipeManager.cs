@@ -61,5 +61,16 @@ namespace Byte_Blast
                 ArrowTransparency = MathHelper.Lerp(ArrowTransparency, 0.0f, 0.9f);
             }
         }
+
+        public bool AttackReady()
+        {
+            if (m_ToAttack)
+            {
+                m_ToAttack = false;
+                return true;
+            }
+
+            return false;
+        }
     }
 }

@@ -42,14 +42,14 @@ namespace Byte_Blast
             }
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(float speed)
         {
             bool HallwayRemoved = false;
             int HallwaysUpdated = 0;
 
             foreach (Hallway h in m_Hallways)
             {
-                h.Update();
+                h.Update(speed);
 
                 if (h.GetXPos() < -1480.0f)
                 {

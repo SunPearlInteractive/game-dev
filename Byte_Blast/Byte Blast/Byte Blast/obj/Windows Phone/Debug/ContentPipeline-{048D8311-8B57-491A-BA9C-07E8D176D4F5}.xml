@@ -28,6 +28,15 @@
       <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\arrows.xnb</Output>
       <Time>2014-03-01T14:11:25.8578758+00:00</Time>
     </Item>
+    <Item>
+      <Source>monster_0.png</Source>
+      <Name>monster_0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\monster_0.xnb</Output>
+      <Time>2014-03-06T14:59:48.3739829+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{048D8311-8B57-491A-BA9C-07E8D176D4F5}</ContentProjectGUID>
