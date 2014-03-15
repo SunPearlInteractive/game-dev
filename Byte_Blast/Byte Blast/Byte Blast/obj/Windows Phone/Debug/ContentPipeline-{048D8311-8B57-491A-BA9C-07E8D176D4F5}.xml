@@ -35,7 +35,43 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\monster_0.xnb</Output>
-      <Time>2014-03-06T14:59:48.3739829+00:00</Time>
+      <Time>2014-03-06T16:02:17.6317975+00:00</Time>
+    </Item>
+    <Item>
+      <Source>player.png</Source>
+      <Name>player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\player.xnb</Output>
+      <Time>2014-03-06T15:40:40.5846107+00:00</Time>
+    </Item>
+    <Item>
+      <Source>monstergui.png</Source>
+      <Name>monstergui</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\monstergui.xnb</Output>
+      <Time>2014-03-15T16:37:44.797784+00:00</Time>
+    </Item>
+    <Item>
+      <Source>monsterhpbar.png</Source>
+      <Name>monsterhpbar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\monsterhpbar.xnb</Output>
+      <Time>2014-03-15T17:00:53.4267866+00:00</Time>
+    </Item>
+    <Item>
+      <Source>levelfont.spritefont</Source>
+      <Name>levelfont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ryan\Documents\Sun Pearl Interactive\Byte_Blast\Byte Blast\Byte Blast\bin\Windows Phone\Debug\Content\levelfont.xnb</Output>
+      <Time>2014-03-15T18:04:51.0617245+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -16,9 +16,11 @@ namespace Byte_Blast
 
         public const int NumberOfTextures = 1;
         public const int TextureWidth = 164, TextureHeight = 164;
-        public const float ConfrontXPosition = 150.0f;
+        public const float ConfrontXPosition = 120.0f;
 
         private Texture2D[] m_MonsterSprites = new Texture2D[NumberOfTextures];
+        private Texture2D m_GUISprite, m_HPSprite;
+        private SpriteFont m_LevelFont;
         private List<Monster> m_Monsters = new List<Monster>();
         private float m_MonsterSpawnTimer;
         private bool m_Confronting = false;
@@ -38,6 +40,9 @@ namespace Byte_Blast
                 try
                 {
                     m_MonsterSprites[i] = Content.Load<Texture2D>("monster_" + i.ToString());
+                    m_GUISprite = Content.Load<Texture2D>("monstergui");
+                    m_HPSprite = Content.Load<Texture2D>("monsterhpbar");
+                    m_LevelFont = Content.Load<SpriteFont>("levelfont");
                 }
                 catch (Exception E)
                 {
@@ -99,7 +104,7 @@ namespace Byte_Blast
             {
                 try
                 {
-                    m.Draw(spriteBatch, m_MonsterSprites[m.GetTextureID()]);
+                    m.Draw(spriteBatch, m_MonsterSprites[m.GetTextureID()], m_GUISprite, m_HPSprite, m_LevelFont);
                 }
                 catch (Exception E)
                 {
@@ -112,7 +117,7 @@ namespace Byte_Blast
         {
             if (m_Monsters.Count > 0)
             {
-                if (m_Monsters[0].GetXPosition() <= ConfrontXPosition)
+                if (m_Monsters[0].GetXPosition() <= ConfrontXPosition + 40.0f)
                     m_Monsters[0].TakeDamage(damage);
             }
         }

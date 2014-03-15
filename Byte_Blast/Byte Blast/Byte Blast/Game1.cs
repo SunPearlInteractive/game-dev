@@ -28,6 +28,7 @@ namespace Byte_Blast
         #region Content Declerations
 
         Texture2D m_BackgoundSprite;
+        Texture2D m_PlayerSprite;
 
         #endregion
 
@@ -83,6 +84,7 @@ namespace Byte_Blast
             try
             {
                 m_BackgoundSprite = Content.Load<Texture2D>("background");
+                m_PlayerSprite = Content.Load<Texture2D>("player");
             }
             catch (Exception E)
             {
@@ -147,6 +149,7 @@ namespace Byte_Blast
 
             m_HallwayManager.Draw(spriteBatch);
             m_MonsterManager.Draw(spriteBatch);
+            spriteBatch.Draw(m_PlayerSprite, new Vector2(20.0f, 170.0f), Color.White);
             spriteBatch.Draw(m_BackgoundSprite, new Vector2(-1024, -240), Color.White);
 
             spriteBatch.End();
